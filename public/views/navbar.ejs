@@ -1,0 +1,19 @@
+<nav>
+   <div class="top_logo">
+      <ul class="navbar">
+         <li><a href="/">Home</a></li>
+         <li><a href="/htplay">How To Play</a></li>
+         <li>
+            <a href="/" class="logo">
+               <img src="../images/final_logo_crop.png" alt="" />
+            </a>
+         </li>
+         <li><a href="/leaderboard">Leaderboard</a></li>
+         <% if(user) { %> 
+         <li><a href="/account">My Account</a></li>
+         <% } else { %> 
+         <li><a href="/login">Login</a> / <a href="/register">Register</a></a></li>
+         <% } %> 
+      </ul>
+   </div>
+</nav>

@@ -1,0 +1,315 @@
+@font-face {
+   font-family: "minecraftia";
+   src: url(../font/Minecraftia.ttf);
+}
+
+* {
+   box-sizing: border-box;
+   font-family: minecraftia, sans-serif; /* in case my font doesn't ->
+    load then all text will be sans-serif*/
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   /*  all elements in my list with links aka my navbar */
+   display: inline-block;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: 0.4s;
+}
+
+header {
+   position: relative;
+   width: 100%;
+}
+
+nav {
+   background-image: linear-gradient(rgb(0, 128, 255), rgb(0, 179, 0));
+   position: relative;
+   padding: 20px 40px;
+   z-index: 0; /* in case of other elements being hidden behind navbar */
+}
+
+.top_logo {
+   position: relative;
+   max-width: 1500px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   /* positioning of logo is optimised for full screen PCs */
+   position: absolute;
+   display: inline-block;
+   width: 250px;
+   height: 150px;
+   top: 45px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.logo img {
+   width: 250px;
+   height: 150px;
+   object-fit: contain;
+}
+
+nav ul {
+   margin: 0;
+   width: 100%;
+   transition: 0.4s;
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+}
+
+nav ul li {
+   width: 20%;
+   text-align: center;
+}
+
+nav ul li a {
+   color: #a2482a;
+   font-weight: bold;
+}
+
+nav ul li a:hover {
+   color: white;
+}
+
+#bg_video {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+
+/*    home page PLAY NOW button     */
+a.play {
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 10px 20px;
+   font-size: 50px;
+   margin: 4px 2px;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 12px;
+   background-color: rgba(0, 230, 0, 0.5);
+}
+
+a.play:hover {
+   background-color: rgb(0, 230, 0);
+   color: white;
+}
+
+/*   How to play text/instructions edit   */
+div.htplay {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+h1.instructions {
+   font-size: 35px;
+   color: #ff0000;
+   text-align: center;
+   padding-top: 60px;
+}
+
+div.rules {
+   max-width: 900px;
+   font-size: 15px;
+   padding: 20px;
+   margin: 0px 20px;
+   text-align: center;
+   border-radius: 5px;
+   border: 1px solid #ffebaa;
+   background-color: #c3ffb0;
+}
+
+mark {
+   color: antiquewhite;
+}
+
+/*    CSS EDITS FOR LEADERBOARD TABLE   (BELOW)   */
+.rank_title {
+   color: #ff0000;
+   font-size: 45px;
+   margin-top: 80px;
+   text-align: center;
+}
+
+.rank_table {
+   margin: 20px;
+   font-size: 15px;
+   box-shadow: 0 0 25px rgb(0, 179, 0);
+   margin-left: auto;
+   margin-right: auto;
+   width: 60%;
+   height: 60%;
+}
+
+.rank_table thead tr {
+   background-color: rgb(0, 230, 0);
+   color: aliceblue;
+}
+
+.rank_table th {
+   padding: 10px 12px;
+}
+
+.rank_table td {
+   padding: 10px 12px;
+}
+
+.rank_table tbody tr {
+   border-bottom: 3px solid rgb(162, 72, 42);
+}
+
+.rank_table tbody tr:nth-of-type(odd) {
+   background-color: rgba(0, 230, 0, 0.45);
+}
+
+.rank_table tbody tr:nth-of-type(even) {
+   background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1000px) {
+   .rank_table {
+      width: 80%;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .rank_table {
+      width: 100%;
+   }
+}
+
+/*    Login / Register form    */
+
+.login-register {
+   margin-top: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.login,
+.register {
+   width: 500px;
+   padding: 20px;
+   border-radius: 5px;
+   border: 1px solid #a2482a;
+   background-color: #c3ffb0;
+}
+
+.login-register h1 {
+   margin: 0px;
+   text-align: center;
+   font-size: 30px;
+   color: brown;
+}
+
+.login-register input {
+   margin-top: 5px;
+   width: 100%;
+   border-radius: 6px;
+   padding: 5px 8px;
+   border: 2px solid #b3b3b3;
+}
+
+.login-register input:focus {
+   outline: none;
+   border: 2px solid #0080ff;
+}
+
+.login-register label {
+   display: block;
+   margin-top: 5px;
+   font-size: 15px;
+}
+
+button.login-btn,
+button.register-btn {
+   width: 100%;
+   display: block;
+   font-size: 15px;
+   padding: 5px 8px;
+   text-align: center;
+   margin-top: 10px;
+   cursor: pointer;
+   border-radius: 5px;
+   background-color: #00e600;
+   border: 2px solid #5eff00;
+}
+
+button.login-btn:hover,
+button.register-btn:hover {
+   color: white;
+}
+
+.out_result p {
+   margin: 15px 0 0;
+   color: red;
+   font-size: 10px;
+}
+
+/*    MY ACCOUNT PAGE      */
+.account_overview {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+
+.account_title {
+   color: #ff0000;
+   margin-top: 80px;
+   text-align: center;
+}
+
+.account_pfp {
+   display: block;
+   padding-right: 20px;
+}
+
+.account_bkg {
+   width: 300px;
+   padding: 15px;
+   background-color: #4b4b4e80;
+   color: white;
+}
+
+.account_bkg p {
+   margin: 10px 0 5px;
+}
+
+.account_bkg input {
+   width: 100%;
+   padding: 8px 4px;
+   border: none;
+   border-radius: 5px;
+}
+
+.account_bkg input:focus {
+   outline: none;
+}
+
+.logout-btn {
+   cursor: pointer;
+   color: #ffffff;
+   margin-top: 10px;
+   background-color: #ff0000;
+}

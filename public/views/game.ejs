@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="csrf-token" content="<%= csrfToken %>" />
+      <title>Archer Impossible | World's Hardest Game | Minecraft Edition</title>
+      <link rel="stylesheet" href="../css/design.css" />
+      <link rel="stylesheet" href="../css/game.css" />
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   </head>
+
+   <body>
+      <audio autoplay loop src="../audio/epic adventure music.mp3"></audio>
+
+      <header><%- include('navbar'); %></header>
+
+      <div id="game_container">
+         <div id="game_canvas">
+            <div id="loaderbox">
+               <div class="loader">
+                  <div class="loader">
+                     <div class="loader">
+                        <div class="loader">
+                           <div class="loader"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="../js/p5.min.js"></script>
+      <script src="../js/game.js"></script>
+   </body>
+</html>

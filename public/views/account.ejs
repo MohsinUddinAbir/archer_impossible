@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="csrf-token" content="<%= csrfToken %>" />
+      <title>My Account | Archer Impossible | World's Hardest Game | Minecraft Edition</title>
+      <link rel="stylesheet" href="../css/design.css" />
+   </head>
+   <body style="background-image: url(images/login_bkg.jpg)">
+      <audio autoplay loop src="../audio/epic adventure music.mp3"></audio>
+
+      <header><%- include('navbar'); %></header>
+
+      <div class="account_view">
+         <h1 class="account_title"><u>My Account Details</u></h1>
+         <div class="account_overview">
+            <div class="account_pfp"><img src="../images/pfp.png" class="pfp" /></div>
+            <div class="account_bkg">
+               <p>My Email Address</p>
+               <input type="text" readonly="readonly" value="<%= user.email %>" />
+               <p>My Username</p>
+               <input type="text" readonly="readonly" value="<%= user.username %>" />
+               <p>My Age</p>
+               <input type="text" readonly="readonly" value="<%= user.age %>" />
+
+               <form method="post" action="/logout">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                  <input class="logout-btn" type="submit" value="Logout" />
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

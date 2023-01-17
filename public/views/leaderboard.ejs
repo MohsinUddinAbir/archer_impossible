@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="csrf-token" content="<%= csrfToken %>" />
+      <title>Ranking for Archer Impossible | World's Hardest Game | Minecraft Edition</title>
+      <link rel="stylesheet" href="../css/design.css" />
+   </head>
+
+   <body style="background-image: url(../images/login_bkg.jpg)">
+      <audio autoplay loop src="../audio/epic adventure music.mp3"></audio>
+
+      <header><%- include('navbar'); %></header>
+
+      <h1 class="rank_title"><u>Leaderboard Ranking</u></h1>
+
+      <% function formatTime(second) { let min = Math.floor(second / 60); let sec = second % 60; if (!min) return sec + "sec"; return min + "min " + sec + "sec"; } %>
+
+      <table class="rank_table">
+         <thead>
+            <tr>
+               <th>Rank</th>
+               <th>Username</th>
+               <th>High Score</th>
+               <th>Best Time</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <% for (let [i, u] of users.entries()) { %>
+            <tr>
+               <td><%= i + 1 %></td>
+               <td><%= u.username %></td>
+               <td><%= u.score %></td>
+               <td><%= formatTime(u.time) %></td>
+            </tr>
+            <% } %>
+         </tbody>
+      </table>
+   </body>
+</html>

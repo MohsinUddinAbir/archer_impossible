@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="csrf-token" content="<%= csrfToken %>" />
+      <title>Archer Impossible | World's Hardest Game | Minecraft Edition</title>
+      <link rel="stylesheet" href="../css/design.css" />
+   </head>
+
+   <body>
+      <video autoplay muted loop id="bg_video">
+         <source src="../images/SnapSave.io-This 4K 120fps Minecraft Scenery Cinematic is the real deal-(1080p60).mp4" type="video/mp4" />
+      </video>
+
+      <script>
+         document.getElementById("bg_video").playbackRate = 3;
+      </script>
+
+      <header><%- include('navbar'); %></header>
+
+      <!--Simple button that will start game later-->
+      <a class="play" href="game"> PLAY NOW </a>
+   </body>
+</html>

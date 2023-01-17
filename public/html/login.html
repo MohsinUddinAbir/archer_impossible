@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login / Register | Archer Impossible | World's Hardest Game | Minecraft Edition</title>
+      <link rel="stylesheet" href="../css/design.css" />
+   </head>
+
+   <body style="background-image: url(../images/login_bkg.jpg)">
+      <audio autoplay loop src="../audio/epic adventure music.mp3"></audio>
+      <header>
+         <nav>
+            <div class="top_logo">
+               <ul class="navbar">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="htplay.html">How To Play</a></li>
+                  <li>
+                     <a href="index.html" class="logo">
+                        <img src="../images/final_logo_crop.png" alt="" />
+                     </a>
+                  </li>
+                  <li><a href="leaderboard.html">Leaderboard</a></li>
+                  <li><a href="login.html">Login / Register</a></li>
+                  <!-- <li><a href="account.html">My Account</a></li> -->
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!--Login and Registry form for user that will send info inputted and be checked with data storage and javascript-->
+      <div class="login-register">
+         <div class="login">
+            <form>
+               <h1><u>Login</u></h1>
+               <label for="log_username">Username</label>
+               <input type="text" id="log_username" name="log_user" placeholder="Username" />
+               <label for="log_password">Password</label>
+               <input type="password" id="log_password" name="log_pass" placeholder="*******" />
+               <button onclick="loginFunc()" id="log_button" class="login" type="submit">Login</button>
+            </form>
+         </div>
+
+         <div class="register">
+            <form>
+               <h1><u>Register</u></h1>
+               <label for="reg_email">Email address</label>
+               <input type="email" id="reg_email" name="reg_email" placeholder="example@gmail.com" />
+               <label for="reg_username">Username</label>
+               <input type="text" id="reg_username" name="reg_user" placeholder="Username" />
+               <label for="reg_password">Password</label>
+               <input type="password" id="reg_password" name="reg_pass" placeholder="********" />
+               <label for="reg_age">Age</label>
+               <input type="number" id="reg_age" name="reg_age" min="1" max="100" placeholder="1-100" />
+            </form>
+
+            <button onclick="signup()" id="reg_button" class="register" type="submit">Register</button>
+
+            <div class="out_result">
+               <p id="result" class="result"></p>
+            </div>
+         </div>
+      </div>
+
+      <script src="../js/main.js"></script>
+   </body>
+</html>
